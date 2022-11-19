@@ -20,27 +20,4 @@ body{
 }
 
 
-.dogImg{
-    position: relative;
-    z-index: 2;
-    bottom: 50px;
-}
-
-.lineImg{
-    position: relative;
-    height: 22rem;
-    z-index: 1;
-}
-
-.overlap{
-    position: relative;
-    border: 1px;
-}
-
-.textOverlap{
-    position:relative;
-    z-index: 3;
-    top: 100px;
-}
-
 
