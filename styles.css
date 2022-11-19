@@ -32,6 +32,8 @@ body{
     position: relative;
     z-index: 2;
     bottom:5vh;
+    padding-left: 20px;
+    padding-right: 20px;
 
 }
 
