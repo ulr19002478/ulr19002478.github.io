@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-
 .dancing{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+
+.dancingBig{
     font-family: 'Dancing Script', cursive;
     padding: 20px;
     font-size: 100px;
@@ -10,7 +15,10 @@
 
 
 
+
 body{
-    background-color: rgb(253, 198, 97);
+    background-color: #e4954c;
 }
+
+
 
