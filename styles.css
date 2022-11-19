@@ -19,5 +19,24 @@ body{
     margin: 0px;
 }
 
+.overlap{
+    position: relative;
+}
+.textOverlap{
+    position: relative;
+    top:10vh;
 
+}
 
+.dogImg{
+    position: relative;
+    z-index: 2;
+    bottom:5vh;
+
+}
+
+.lineImg{
+    position: relative;
+    z-index: 1;
+    height:21rem;
+}
