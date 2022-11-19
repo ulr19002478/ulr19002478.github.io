@@ -27,6 +27,7 @@ body{
     position: relative;
     height: 400px;
     z-index: 1;
+    white-space: nowrap;
 }
 
 .overlap{
