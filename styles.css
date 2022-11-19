@@ -27,7 +27,6 @@ body{
     position: relative;
     height: 20rem;
     z-index: 1;
-    white-space: nowrap;
 }
 
 .overlap{
@@ -41,6 +40,7 @@ body{
     top: 100px;
 }
 
-h1 {
-    white-space: nowrap;
-} 
+div{
+    white-space :nowrap;
+}
+
