@@ -34,13 +34,14 @@ body{
     bottom:5vh;
     padding-left: 20px;
     padding-right: 20px;
+    width:23rem;
 
 }
 
 .lineImg{
     position: relative;
     z-index: 1;
-    height:21rem;
+    height:17rem;
     padding-left: 30px;
     padding-right: 30px;
 }
