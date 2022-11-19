@@ -25,7 +25,7 @@ body{
 
 .lineImg{
     position: relative;
-    height: 400px;
+    height: 30rem;
     z-index: 1;
     white-space: nowrap;
 }
