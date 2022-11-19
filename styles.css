@@ -14,6 +14,9 @@
 
 body{
     background-color: #e4954c;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
 }
 
 
