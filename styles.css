@@ -12,13 +12,32 @@
     font-size: 100px;
 }
 
-
-
-
-
 body{
     background-color: #e4954c;
 }
 
+
+.dogImg{
+    position: relative;
+    z-index: 2;
+    bottom: 50px;
+}
+
+.lineImg{
+    position: relative;
+    height: 400px;
+    z-index: 1;
+}
+
+.overlap{
+    position: relative;
+    border: 1px;
+}
+
+.textOverlap{
+    position:relative;
+    z-index: 3;
+    top: 100px;
+}
 
 
