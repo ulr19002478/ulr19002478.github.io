@@ -18,11 +18,26 @@
 
 img.dogImg {
     transition: transform 0.3s ease-in-out; /* Ensure smooth transition for scale */
-    animation: floatImage 2s ease-in-out infinite;
+    animation: floatImage 2s ease-in-out infinite; /* Keep the float animation */
 }
 
 img.dogImg:hover {
     transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Floating effect for the image (only vertical movement) */
+@keyframes floatImage {
+    0% {
+        transform: translateY(0); /* Start at original position */
+    }
+
+    50% {
+        transform: translateY(-10px); /* Move up 10px */
+    }
+
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
 }
 
 /* Floating effect for text letters */
@@ -30,21 +45,6 @@ img.dogImg:hover {
     display: inline-block;
     animation: float 1.5s ease-in-out infinite;
     padding: 0 5px;
-}
-
-/* Floating effect for the image */
-@keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
 }
 
 /* Keyframe for the text floating effect */
