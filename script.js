@@ -3,24 +3,25 @@ const mainText = document.getElementById('main-text');
 const subText = document.getElementById('sub-text');
 const body = document.body;
 
-// State variable to track gradient flip
-let isGradientFlipped = false;
+// State variable to track gradient inversion
+let isGradientInverted = false;
 
 // Add a gradient that follows the mouse
 document.body.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
 
-    const color1 = isGradientFlipped ? 'rgba(100, 50, 50, 0.5)' : 'rgba(255, 183, 77, 0.8)';
-    const color2 = isGradientFlipped ? 'rgba(228, 149, 76, 0.8)' : 'rgba(100, 50, 50, 0.5)';
-    const color3 = isGradientFlipped ? 'rgba(255, 183, 77, 0.8)' : 'rgba(228, 149, 76, 0.8)';
+    // Define the two gradient color sets
+    const gradientColors = isGradientInverted
+        ? ['rgba(77, 183, 255, 0.8)', 'rgba(76, 149, 228, 0.8)', 'rgba(50, 50, 100, 0.5)']
+        : ['rgba(255, 183, 77, 0.8)', 'rgba(228, 149, 76, 0.8)', 'rgba(100, 50, 50, 0.5)'];
 
     body.style.background = `
         radial-gradient(
             circle at ${mouseX}px ${mouseY}px, 
-            ${color1}, 
-            ${color2} 50%, 
-            ${color3} 100%
+            ${gradientColors[0]}, 
+            ${gradientColors[1]} 50%, 
+            ${gradientColors[2]} 100%
         )
     `;
 });
@@ -54,8 +55,8 @@ function updateTextAndImage() {
         document.title = 'what the dog doin';
     }
 
-    // Flip the gradient colors
-    isGradientFlipped = !isGradientFlipped;
+    // Completely invert the gradient
+    isGradientInverted = !isGradientInverted;
 
     wrapTextInSpans();
 }
