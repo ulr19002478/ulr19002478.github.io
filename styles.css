@@ -3,23 +3,59 @@
 .dancing {
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
+    letter-spacing: 2px; /* Adds spacing to give an airy feel */
 }
 
 .dancingBig {
     font-family: 'Dancing Script', cursive;
     padding: 20px;
     font-size: 100px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    /* Adds a shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.7); /* Add glowing shadow */
     color: #fff;
+    letter-spacing: 3px; /* Add spacing to make the text feel less cramped */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth color transition */
+}
+
+.dancingBig:hover {
+    color: #ffcc00; /* Slight color change on hover */
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.7); /* More intense glowing effect */
 }
 
 body {
-    background-color: #e4954c;
+    background: linear-gradient(45deg, #e4954c, #6a9fb5); /* Background gradient for a soft magic feel */
+    background-size: 400% 400%; /* Larger background to create the feel of movement */
+    animation: backgroundAnimation 10s ease infinite; /* Animate background shift */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0px;
+    margin: 0;
     height: 100vh;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+img.dogImg {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    animation: floatImage 2s ease-in-out infinite;
+}
+
+img.dogImg:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Add a subtle glow effect on hover */
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Adding some space for aesthetic purposes */
+.textOverlap {
+    margin: 20px 0;
 }
