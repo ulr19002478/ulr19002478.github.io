@@ -17,16 +17,16 @@ document.body.addEventListener('mousemove', (e) => {
                 circle at ${mouseX}px ${mouseY}px, 
                 rgba(255, 183, 77, 0.8), 
                 rgba(228, 149, 76, 0.8) 50%, 
-                rgba(100, 50, 50, 0.5) 100%
+                rgba(100, 50, 50, 0.7) 80%
             )
         `;
     } else {
         body.style.background = `
             radial-gradient(
                 circle at ${mouseX}px ${mouseY}px, 
-                rgba(100, 50, 50, 0.5), 
+                rgba(100, 50, 50, 0.7), 
                 rgba(228, 149, 76, 0.8) 50%, 
-                rgba(255, 183, 77, 0.8) 100%
+                rgba(255, 183, 77, 0.8) 80%
             )
         `;
     }
