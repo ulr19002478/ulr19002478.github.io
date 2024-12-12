@@ -90,10 +90,12 @@ body {
     position: relative;
     transition: background-color 0.5s ease-in-out;
     padding: 0 10px; /* Ensure some padding for smaller screens */
+    box-sizing: border-box; /* Ensure padding is considered in total height */
 }
 
+/* Prevent overflow on small screens */
 body {
-    overflow: hidden;
+    overflow: visible; /* Allow content to flow */
 }
 
 /* Responsive Design for Smaller Screens */
@@ -110,5 +112,11 @@ body {
 @media (max-width: 480px) {
     .dancingBig {
         font-size: 3.5rem; /* Even smaller font size for very small screens */
+    }
+    .dogImgWrapper {
+        margin: 0 5%; /* Ensure there's space around the image */
+    }
+    .textOverlap {
+        margin: 10px 0; /* Reduce the margin for better spacing on small screens */
     }
 }
