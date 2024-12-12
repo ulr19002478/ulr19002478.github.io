@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,10 +17,8 @@
             <h1 id="main-text" class="dancingBig text-center textOverlap">the dog</h1>
         </div>
         <div class="d-flex justify-content-center">
-            <!-- Wrapper for the image to apply scale on hover -->
             <div class="dogImgWrapper">
-                <img id="toggle-img" src="thedog.png" alt="the dog is awesome!" class="dogImg"
-                    style="cursor: pointer;">
+                <img id="toggle-img" src="thedog.png" alt="the dog is awesome!" class="dogImg" style="cursor: pointer;">
             </div>
         </div>
         <div>
@@ -29,188 +26,7 @@
         </div>
     </div>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
-        .dancing {
-            font-family: 'Dancing Script', cursive;
-            font-size: 30px;
-            letter-spacing: 2px;
-        }
-
-        .dancingBig {
-            font-family: 'Dancing Script', cursive;
-            padding: 20px;
-            font-size: 100px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            color: #fff;
-            letter-spacing: 3px;
-            transition: color 0.3s ease;
-        }
-
-        /* Wrapper for the image to apply scale on hover */
-        .dogImgWrapper {
-            display: inline-block; /* Allow for scaling */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        /* Image styling */
-        img.dogImg {
-            transition: transform 0.3s ease-in-out; /* Smooth transition for animation */
-            animation: floatImage 2s ease-in-out infinite; /* Keep the float animation */
-        }
-
-        /* Hover effect on the image wrapper (scales the image) */
-        .dogImgWrapper:hover {
-            transform: scale(1.1); /* Slightly enlarge the image */
-        }
-
-        /* Floating effect for the image (only vertical movement, no scaling) */
-        @keyframes floatImage {
-            0% {
-                transform: translateY(0); /* Start at original position */
-            }
-
-            50% {
-                transform: translateY(-10px); /* Move up 10px */
-            }
-
-            100% {
-                transform: translateY(0); /* Return to original position */
-            }
-        }
-
-        /* Floating effect for text letters */
-        .letter {
-            display: inline-block;
-            animation: float 1.5s ease-in-out infinite;
-            padding: 0 5px;
-        }
-
-        /* Keyframe for the text floating effect */
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-15px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .textOverlap {
-            margin: 20px 0;
-        }
-
-        body {
-            background-color: #e4954c;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-            transition: background-color 0.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes trailAnimation {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            100% {
-                transform: scale(0);
-                opacity: 0;
-            }
-        }
-
-        body {
-            overflow: hidden;
-        }
-    </style>
-
-    <script>
-        const toggleImg = document.getElementById('toggle-img');
-        const mainText = document.getElementById('main-text');
-        const subText = document.getElementById('sub-text');
-        const body = document.body;
-
-        // Function to animate the text with random delays for each letter
-        function animateText() {
-            const textElements = document.querySelectorAll('.magical-text span');
-            textElements.forEach((letter) => {
-                // Randomize the animation delay for each letter
-                const randomDelay = Math.random() * 2; // Random delay between 0 and 2 seconds
-                letter.style.animationDelay = `${randomDelay}s`;
-            });
-        }
-
-        // Function to wrap each letter in a span tag to apply the animation
-        function wrapTextInSpans() {
-            const magicalText = document.querySelectorAll('#main-text, #sub-text');
-            magicalText.forEach(textElement => {
-                const text = textElement.textContent.split('');
-                textElement.innerHTML = ''; // Clear the text content
-                text.forEach(letter => {
-                    const span = document.createElement('span');
-                    span.classList.add('letter');
-                    span.textContent = letter;
-                    textElement.appendChild(span);
-                });
-            });
-            animateText(); // Apply random animation delay to the letters
-        }
-
-        // Function to update the text and image when clicked
-        function updateTextAndImage() {
-            if (toggleImg.src.includes('thedog.png')) {
-                toggleImg.src = 'thecat.jpg';
-                toggleImg.alt = 'the cat is awesome!';
-                mainText.textContent = 'the cat';
-                subText.textContent = 'what the cat doin?';
-                body.style.backgroundColor = '#6a9fb5'; /* Change background to a cat-themed color */
-                document.title = 'what the cat doin';  /* Change the title to reflect the cat */
-            } else {
-                toggleImg.src = 'thedog.png';
-                toggleImg.alt = 'the dog is awesome!';
-                mainText.textContent = 'the dog';
-                subText.textContent = 'what the dog doin?';
-                body.style.backgroundColor = '#e4954c'; /* Revert background to the dog-themed color */
-                document.title = 'what the dog doin'; /* Revert the title to the dog theme */
-            }
-
-            // Reapply the letter wrapping and animation on text change
-            wrapTextInSpans();
-        }
-
-        // Call the function to wrap text in spans and animate on page load
-        window.onload = () => {
-            wrapTextInSpans();
-        };
-
-        toggleImg.addEventListener('click', updateTextAndImage);
-
-    </script>
-
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
