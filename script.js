@@ -59,7 +59,7 @@ function updateTextAndImage() {
             radial-gradient(
                 circle at 50% 50%, 
                 rgba(100, 50, 50, 0.5), 
-                rgba(136, 66, 66, 0.5) 50%, 
+                rgba(228, 149, 76, 0.8) 50%, 
                 rgba(255, 183, 77, 0.8) 100%
             )
         `;
