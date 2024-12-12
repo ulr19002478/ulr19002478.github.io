@@ -29,10 +29,20 @@
   <style>
       body {
           transition: background-color 0.5s ease-in-out;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          overflow: hidden; /* Prevent scrollbars */
       }
   
       img.dogImg {
           transition: transform 0.3s ease-in-out;
+          max-width: 90%; /* Ensure the image scales appropriately */
+          height: auto;
       }
   
       img.dogImg:hover {
@@ -62,6 +72,7 @@
           }
       });
   </script>
+  
 
 
       
