@@ -9,31 +9,33 @@
 .dancingBig {
     font-family: 'Dancing Script', cursive;
     padding: 20px;
-    font-size: 100px;
+    font-size: 10vw; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: #fff;
     letter-spacing: 3px;
     transition: color 0.3s ease;
 }
 
-/* Wrapper for the image to apply scale on hover */
+
 .dogImgWrapper {
     display: inline-block;
     transition: transform 0.3s ease-in-out;
+    max-width: 100%;
 }
 
-/* Image styling */
 img.dogImg {
     transition: transform 0.3s ease-in-out;
     animation: floatImage 2s ease-in-out infinite;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Hover effect on the image wrapper (scales the image) */
 .dogImgWrapper:hover {
     transform: scale(1.1);
 }
 
-/* Floating effect for the image (only vertical movement, no scaling) */
+
 @keyframes floatImage {
     0% {
         transform: translateY(0);
@@ -85,8 +87,19 @@ body {
     overflow: hidden;
     position: relative;
     transition: background-color 0.5s ease-in-out;
+    padding: 0 10px; 
 }
 
 body {
     overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+    .dancingBig {
+        font-size: 15vw; 
+    }
+    .dogImgWrapper {
+        margin: 0 5%; 
+    }
 }
