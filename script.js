@@ -37,13 +37,13 @@ function updateTextAndImage() {
         toggleImg.src = 'thecat.jpg';
         toggleImg.alt = 'the cat is awesome!';
         mainText.textContent = 'the cat';
-        subText.textContent = 'what the cat doin?';
+        subText.textContent = 'what the cat';
         document.title = 'what the cat doin';
     } else {
         toggleImg.src = 'thedog.png';
         toggleImg.alt = 'the dog is awesome!';
         mainText.textContent = 'the dog';
-        subText.textContent = 'what the dog doin?';
+        subText.textContent = 'what the dog';
         document.title = 'what the dog doin';
     }
 
