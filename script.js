@@ -7,16 +7,26 @@ let isGradientFlipped = false;  // Flag to track if the gradient is flipped
 
 // Add a gradient that follows the mouse
 document.body.addEventListener('mousemove', (e) => {
-    if (!isGradientFlipped) { // Only apply the default gradient if it's not flipped
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
 
+    // Apply the gradient with the correct colors, based on whether it's flipped or not
+    if (!isGradientFlipped) {
         body.style.background = `
             radial-gradient(
                 circle at ${mouseX}px ${mouseY}px, 
                 rgba(255, 183, 77, 0.8), 
                 rgba(228, 149, 76, 0.8) 50%, 
                 rgba(100, 50, 50, 0.5) 100%
+            )
+        `;
+    } else {
+        body.style.background = `
+            radial-gradient(
+                circle at ${mouseX}px ${mouseY}px, 
+                rgba(100, 50, 50, 0.5), 
+                rgba(228, 149, 76, 0.8) 50%, 
+                rgba(255, 183, 77, 0.8) 100%
             )
         `;
     }
@@ -54,26 +64,6 @@ function updateTextAndImage() {
 
     // Toggle the background colors
     isGradientFlipped = !isGradientFlipped;  // Flip the state
-    if (isGradientFlipped) {
-        body.style.background = `
-            radial-gradient(
-                circle at 50% 50%, 
-                rgba(100, 50, 50, 0.5), 
-                rgba(228, 149, 76, 0.8) 50%, 
-                rgba(255, 183, 77, 0.8) 100%
-            )
-        `;
-    } else {
-        body.style.background = `
-            radial-gradient(
-                circle at 50% 50%, 
-                rgba(255, 183, 77, 0.8), 
-                rgba(228, 149, 76, 0.8) 50%, 
-                rgba(100, 50, 50, 0.5) 100%
-            )
-        `;
-    }
-
     wrapTextInSpans();
 }
 
