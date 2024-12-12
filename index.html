@@ -9,7 +9,6 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="styles.css" rel="stylesheet">
 
-
     <title>what the dog doin</title>
 </head>
 
@@ -24,10 +23,6 @@
         </div>
         <div>
             <h1 id="sub-text" class="dancingBig text-center">what the dog doin?</h1>
-        </div>
-        <!-- Button to trigger animation -->
-        <div class="text-center mt-3">
-            <button id="animate-button" class="btn btn-primary">Make it Magical!</button>
         </div>
     </div>
 
@@ -75,7 +70,6 @@
         const mainText = document.getElementById('main-text');
         const subText = document.getElementById('sub-text');
         const body = document.body;
-        const animateButton = document.getElementById('animate-button');
         
         // Function to animate the text
         function animateText() {
@@ -87,8 +81,8 @@
             });
         }
 
-        // Button click event to animate text
-        animateButton.addEventListener('click', () => {
+        // Wrap text in span elements to allow individual letter animation
+        function wrapTextInSpans() {
             const magicalText = document.querySelectorAll('#main-text, #sub-text');
             magicalText.forEach(textElement => {
                 const text = textElement.textContent.split('');
@@ -101,7 +95,12 @@
                 });
             });
             animateText(); // Apply animation to newly created letter spans
-        });
+        }
+
+        // Call the wrapTextInSpans function when the page loads
+        window.onload = () => {
+            wrapTextInSpans();
+        };
 
         toggleImg.addEventListener('click', () => {
             if (toggleImg.src.includes('thedog.png')) {
