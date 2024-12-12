@@ -10,13 +10,8 @@
     padding: 20px;
     font-size: 100px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Adds a shadow for depth */
     color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
-.dancingBig:hover {
-    color: #ffcb00; /* Yellow glow effect on hover */
-    text-shadow: 2px 2px 10px rgba(255, 255, 0, 0.8); /* Stronger text-shadow for hover */
 }
 
 body {
@@ -25,114 +20,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    margin: 0px;
     height: 100vh;
-    font-family: 'Arial', sans-serif;
-    transition: background-color 0.5s ease-in-out;
-}
-
-/* Centered text and spacing improvements */
-#main-text, #sub-text {
-    margin: 10px;
-}
-
-#main-text {
-    animation: fadeIn 2s ease-out;
-}
-
-#sub-text {
-    animation: fadeIn 3s ease-out;
-}
-
-/* Button style for the dog/cat image toggle */
-#toggle-img {
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    animation: floatImage 2s ease-in-out infinite;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-#toggle-img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Larger shadow effect */
-}
-
-.d-flex {
-    margin-top: 20px;
-}
-
-/* Floating effect for text letters */
-.letter {
-    display: inline-block;
-    animation: float 1.5s ease-in-out infinite;
-    padding: 0 5px;
-}
-
-/* Floating effect for the image */
-@keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Keyframe for the text floating effect */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Fade-in animation for the text */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.magical-text {
-    display: inline-block;
-    font-size: 60px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-/* Additional styles for the layout */
-.overlap {
-    position: relative;
-    text-align: center;
-    z-index: 1;
-}
-
-.textOverlap {
-    z-index: 2;
-    position: relative;
-}
-
-/* Styles for the background image effect */
-body {
-    background: url('https://www.w3schools.com/w3images/snow.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-}
-
-body.dark {
-    background-color: #2d2d2d;
 }
