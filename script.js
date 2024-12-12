@@ -25,7 +25,7 @@ document.body.addEventListener('mousemove', (e) => {
             radial-gradient(
                 circle at ${mouseX}px ${mouseY}px, 
                 rgba(100, 50, 50, 0.5), 
-                rgba(228, 149, 76, 0.8) 50%, 
+                rgba(110, 60, 51, 0.8) 50%, 
                 rgba(255, 183, 77, 0.8) 100%
             )
         `;
