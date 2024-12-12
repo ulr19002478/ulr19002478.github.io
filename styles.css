@@ -1,57 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-/* Main text styling */
 .dancing {
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
-    letter-spacing: 2px; /* Adds spacing to give an airy feel */
+    letter-spacing: 2px;
+    /* Adds spacing to give an airy feel */
 }
 
-/* Large dancing text with glowing effect */
 .dancingBig {
     font-family: 'Dancing Script', cursive;
     padding: 20px;
     font-size: 100px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.7); /* Add glowing shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.7);
+    /* Add glowing shadow */
     color: #fff;
-    letter-spacing: 3px; /* Add spacing to make the text feel less cramped */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth color transition */
-    animation: fadeIn 1.5s ease-out forwards; /* Fade-in effect */
+    letter-spacing: 3px;
+    /* Add spacing to make the text feel less cramped */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Smooth color transition */
 }
 
 .dancingBig:hover {
-    color: #ffcc00; /* Slight color change on hover */
-    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.7); /* More intense glowing effect */
-    text-decoration: underline;
-    text-decoration-color: #fff;
-    text-decoration-thickness: 3px;
-    text-underline-position: under;
-    transform: scale(1.05) rotate(2deg); /* Slight rotation and scale on hover */
+    color: #ffcc00;
+    /* Slight color change on hover */
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.7);
+    /* More intense glowing effect */
 }
 
-/* Page background gradient animation */
 body {
-    background: linear-gradient(45deg, #e4954c, #6a9fb5); /* Background gradient for a soft magic feel */
-    background-size: 400% 400%; /* Larger background to create the feel of movement */
-    animation: backgroundAnimation 10s ease infinite; /* Animate background shift */
+    background: linear-gradient(45deg, #e4954c, #6a9fb5);
+    /* Background gradient for a soft magic feel */
+    background-size: 400% 400%;
+    /* Larger background to create the feel of movement */
+    animation: backgroundAnimation 10s ease infinite;
+    /* Animate background shift */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0;
     height: 100vh;
-    overflow: hidden;
-    position: relative;
 }
 
-/* Animate the background gradient */
 @keyframes backgroundAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-/* Image hover effects (scale and glowing box-shadow) */
 img.dogImg {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     animation: floatImage 2s ease-in-out infinite;
@@ -59,87 +63,25 @@ img.dogImg {
 
 img.dogImg:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Add a subtle glow effect on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    /* Add a subtle glow effect on hover */
 }
 
-/* Floating effect for the image */
 @keyframes floatImage {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Adding some space for aesthetic purposes */
 .textOverlap {
     margin: 20px 0;
-}
-
-/* Sparkle effect on the body */
-body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: url('https://www.transparenttextures.com/patterns/pw-maze.png') repeat;
-    animation: sparkle 3s linear infinite;
-}
-
-@keyframes sparkle {
-    0% { background-position: 0px 0px; }
-    50% { background-position: 100px 100px; }
-    100% { background-position: 0px 0px; }
-}
-
-/* Fade-in animation for the text */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Mouse trail effect */
-@keyframes trailAnimation {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(0);
-        opacity: 0;
-    }
-}
-
-body {
-    overflow: hidden; /* Prevents the page from scrolling when the mouse trail is active */
-}
-
-/* JavaScript-based mouse trail effect */
-script {
-    position: absolute;
-    pointer-events: none;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-}
-
-/* Glow effect on the mouse trail */
-body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    background-color: #ffcc00;
-    border-radius: 50%;
-    pointer-events: none;
-    animation: trailAnimation 1s forwards;
 }
