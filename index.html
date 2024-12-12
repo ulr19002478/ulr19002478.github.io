@@ -11,9 +11,6 @@
     <title>what the dog doin</title>
   </head>
   <body>
-    
-
-
     <div class="overlap border-5">
       <div>
           <h1 id="main-text" class="dancingBig text-center textOverlap">the dog</h1>
@@ -53,16 +50,17 @@
               mainText.textContent = 'the cat';
               subText.textContent = 'what the cat doin?';
               body.style.backgroundColor = '#6a9fb5'; /* Change background to a cat-themed color */
+              document.title = 'what the cat doin?';  /* Change the title to reflect the cat */
           } else {
               toggleImg.src = 'thedog.png';
               toggleImg.alt = 'the dog is awesome!';
               mainText.textContent = 'the dog';
               subText.textContent = 'what the dog doin?';
               body.style.backgroundColor = '#e4954c'; /* Revert background to the dog-themed color */
+              document.title = 'what the dog doin'; /* Revert the title to the dog theme */
           }
       });
   </script>
-
 
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
