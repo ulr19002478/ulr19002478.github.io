@@ -80,8 +80,10 @@
         // Function to animate the text
         function animateText() {
             const textElements = document.querySelectorAll('.magical-text span');
-            textElements.forEach((letter, index) => {
-                letter.style.animationDelay = `${index * 0.1}s`; // Add staggered delay
+            textElements.forEach((letter) => {
+                // Randomize the animation delay for each letter to make them float independently
+                const randomDelay = Math.random() * 2; // Random delay between 0 and 2 seconds
+                letter.style.animationDelay = `${randomDelay}s`;
             });
         }
 
