@@ -14,6 +14,7 @@
     color: #fff;
     letter-spacing: 3px;
     transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent word wrapping */
 }
 
 /* Wrapper for the image to apply scale on hover */
@@ -21,6 +22,7 @@
     display: inline-block;
     transition: transform 0.3s ease-in-out;
     max-width: 100%;
+    margin-bottom: 20px; /* Add space between image and text */
 }
 
 /* Image styling */
@@ -83,14 +85,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Align items from the top */
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    transition: background-color 0.5s ease-in-out;
+    height: auto; /* Remove fixed height */
     padding: 0 10px; /* Ensure some padding for smaller screens */
     box-sizing: border-box; /* Ensure padding is considered in total height */
+    min-height: 100vh; /* Ensure the body always takes at least full height */
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 /* Prevent overflow on small screens */
