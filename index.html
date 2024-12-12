@@ -39,13 +39,14 @@
             transform: scale(1.1);
         }
 
+        /* Each letter will have a slight vertical float animation */
         .letter {
             display: inline-block;
             animation: float 1.5s ease-in-out infinite;
             padding: 0 5px;
         }
 
-        /* Animation for the letters */
+        /* Keyframe for the floating effect */
         @keyframes float {
             0% {
                 transform: translateY(0);
@@ -71,22 +72,22 @@
         const subText = document.getElementById('sub-text');
         const body = document.body;
         
-        // Function to animate the text
+        // Function to animate the text with random delays for each letter
         function animateText() {
             const textElements = document.querySelectorAll('.magical-text span');
             textElements.forEach((letter) => {
-                // Randomize the animation delay for each letter to make them float independently
+                // Randomize the animation delay for each letter
                 const randomDelay = Math.random() * 2; // Random delay between 0 and 2 seconds
                 letter.style.animationDelay = `${randomDelay}s`;
             });
         }
 
-        // Wrap text in span elements to allow individual letter animation
+        // Function to wrap each letter in a span tag to apply the animation
         function wrapTextInSpans() {
             const magicalText = document.querySelectorAll('#main-text, #sub-text');
             magicalText.forEach(textElement => {
                 const text = textElement.textContent.split('');
-                textElement.innerHTML = ''; // Clear the text
+                textElement.innerHTML = ''; // Clear the text content
                 text.forEach(letter => {
                     const span = document.createElement('span');
                     span.classList.add('letter');
@@ -94,10 +95,10 @@
                     textElement.appendChild(span);
                 });
             });
-            animateText(); // Apply animation to newly created letter spans
+            animateText(); // Apply random animation delay to the letters
         }
 
-        // Call the wrapTextInSpans function when the page loads
+        // Call the function to wrap text in spans and animate on page load
         window.onload = () => {
             wrapTextInSpans();
         };
