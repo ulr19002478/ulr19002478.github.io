@@ -2,6 +2,7 @@ const toggleImg = document.getElementById('toggle-img');
 const mainText = document.getElementById('main-text');
 const subText = document.getElementById('sub-text');
 const body = document.body;
+const gradientFollow = document.getElementById('gradient-follow');
 
 function animateText() {
     const textElements = document.querySelectorAll('.magical-text span');
@@ -47,10 +48,12 @@ function updateTextAndImage() {
 }
 
 document.body.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX / window.innerWidth * 100;
-    const mouseY = e.clientY / window.innerHeight * 100;
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
 
-    body.style.background = `radial-gradient(circle at ${mouseX}% ${mouseY}%, #f5a623, #e4954c)`;
+    // Update the gradient-follow element position
+    gradientFollow.style.left = `${mouseX}px`;
+    gradientFollow.style.top = `${mouseY}px`;
 });
 
 window.onload = () => {
