@@ -3,17 +3,6 @@ const mainText = document.getElementById('main-text');
 const subText = document.getElementById('sub-text');
 const body = document.body;
 
-// Create a div that will serve as the cursor gradient effect
-const cursorGradient = document.createElement('div');
-cursorGradient.style.position = 'absolute';
-cursorGradient.style.width = '150px';
-cursorGradient.style.height = '150px';
-cursorGradient.style.borderRadius = '50%';
-cursorGradient.style.pointerEvents = 'none'; // Prevent interference with other elements
-cursorGradient.style.mixBlendMode = 'overlay'; // Blend with the background
-cursorGradient.style.transition = 'transform 0.05s ease'; // Smooth movement
-body.appendChild(cursorGradient);
-
 function animateText() {
     const textElements = document.querySelectorAll('.magical-text span');
     textElements.forEach((letter) => {
@@ -57,19 +46,14 @@ function updateTextAndImage() {
     wrapTextInSpans();
 }
 
-// Add event listener for mouse movement to update gradient position and color
+// Create a mouse-following gradient effect
 document.body.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
+    const mouseX = e.clientX / window.innerWidth * 100;
+    const mouseY = e.clientY / window.innerHeight * 100;
 
-    // Move the gradient to follow the mouse
-    cursorGradient.style.transform = `translate(${mouseX - 75}px, ${mouseY - 75}px)`;
-
-    // Update the gradient colors dynamically based on mouse position
-    cursorGradient.style.background = `radial-gradient(circle at center, rgba(${mouseX % 255}, ${mouseY % 255}, 150, 0.8), transparent)`;
+    body.style.background = `radial-gradient(circle at ${mouseX}% ${mouseY}%, #f5a623, #e4954c)`;
 });
 
-// Ensure that text is wrapped in spans on page load
 window.onload = () => {
     wrapTextInSpans();
 };
