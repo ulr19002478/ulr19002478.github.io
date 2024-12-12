@@ -17,7 +17,7 @@
 }
 
 img.dogImg {
-    transition: transform 0.3s ease-in-out; /* Ensure smooth transition */
+    transition: transform 0.3s ease-in-out; /* Ensure smooth transition for scale */
     animation: floatImage 2s ease-in-out infinite;
 }
 
