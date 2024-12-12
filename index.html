@@ -15,64 +15,64 @@
 
 
     <div class="overlap border-5">
-      <div>
-          <h1 id="main-text" class="dancingBig text-center textOverlap">the dog</h1>
-      </div>
-      <div class="d-flex justify-content-center">
-          <img id="toggle-img" src="thedog.png" alt="the dog is awesome!" class="dogImg" style="cursor: pointer; transition: transform 0.3s ease-in-out;">
-      </div>
-      <div>
-          <h1 id="sub-text" class="dancingBig text-center">what the dog doin?</h1>
-      </div>
-  </div>
-  
-  <style>
-      body {
-          transition: background-color 0.5s ease-in-out;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          height: 100vh;
-          overflow: hidden; /* Prevent scrollbars */
-      }
-  
-      img.dogImg {
-          transition: transform 0.3s ease-in-out;
-          max-width: 90%; /* Ensure the image scales appropriately */
-          height: auto;
-      }
-  
-      img.dogImg:hover {
-          transform: scale(1.1);
-      }
-  </style>
-  
-  <script>
-      const toggleImg = document.getElementById('toggle-img');
-      const mainText = document.getElementById('main-text');
-      const subText = document.getElementById('sub-text');
-      const body = document.body;
-  
-      toggleImg.addEventListener('click', () => {
-          if (toggleImg.src.includes('thedog.png')) {
-              toggleImg.src = 'thecat.jpg';
-              toggleImg.alt = 'the cat is awesome!';
-              mainText.textContent = 'the cat';
-              subText.textContent = 'what the cat doing?';
-              body.style.backgroundColor = '#6a9fb5'; /* Change background to a cat-themed color */
-          } else {
-              toggleImg.src = 'thedog.png';
-              toggleImg.alt = 'the dog is awesome!';
-              mainText.textContent = 'the dog';
-              subText.textContent = 'what the dog doin?';
-              body.style.backgroundColor = '#e4954c'; /* Revert background to the dog-themed color */
-          }
-      });
-  </script>
-  
+    <div>
+        <h1 id="main-text" class="dancingBig text-center textOverlap">the dog</h1>
+    </div>
+    <div class="d-flex justify-content-center">
+        <img id="toggle-img" src="thedog.png" alt="the dog is awesome!" class="dogImg" style="cursor: pointer; transition: transform 0.3s ease-in-out;">
+    </div>
+    <div>
+        <h1 id="sub-text" class="dancingBig text-center">what the dog doin?</h1>
+    </div>
+</div>
+
+<style>
+    body {
+        transition: background-color 0.5s ease-in-out;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden; /* Prevent scrollbars */
+    }
+
+    img.dogImg {
+        transition: transform 0.3s ease-in-out;
+        max-width: 90%; /* Ensure the image scales appropriately */
+        height: auto;
+    }
+
+    img.dogImg:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<script>
+    const toggleImg = document.getElementById('toggle-img');
+    const mainText = document.getElementById('main-text');
+    const subText = document.getElementById('sub-text');
+    const body = document.body;
+
+    toggleImg.addEventListener('click', () => {
+        if (toggleImg.src.includes('thedog.png')) {
+            toggleImg.src = 'thecat.jpg';
+            toggleImg.alt = 'the cat is awesome!';
+            mainText.textContent = 'the cat';
+            subText.textContent = 'what the cat doing?';
+            body.style.backgroundColor = '#6a9fb5'; /* Change background to a cat-themed color */
+        } else {
+            toggleImg.src = 'thedog.png';
+            toggleImg.alt = 'the dog is awesome!';
+            mainText.textContent = 'the dog';
+            subText.textContent = 'what the dog doin?';
+            body.style.backgroundColor = '#e4954c'; /* Revert background to the dog-themed color */
+        }
+    });
+</script>
+
 
 
       
