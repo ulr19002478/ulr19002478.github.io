@@ -17,6 +17,7 @@
 /* Body transition effect */
 body {
     transition: background-color 0.5s ease-in-out;
+    background-color: #e4954c;
 }
 
 /* Dog image hover effect */
