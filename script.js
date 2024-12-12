@@ -33,6 +33,7 @@ function wrapTextInSpans() {
 }
 
 function updateTextAndImage() {
+    // Toggle the image and text
     if (toggleImg.src.includes('thedog.png')) {
         toggleImg.src = 'thecat.jpg';
         toggleImg.alt = 'the cat is awesome!';
@@ -45,6 +46,27 @@ function updateTextAndImage() {
         mainText.textContent = 'the dog';
         subText.textContent = 'what the dog doin?';
         document.title = 'what the dog doin';
+    }
+
+    // Toggle the background colors
+    if (body.style.background.includes('rgba(255, 183, 77')) {
+        body.style.background = `
+            radial-gradient(
+                circle at 50% 50%, 
+                rgba(100, 50, 50, 0.5), 
+                rgba(228, 149, 76, 0.8) 50%, 
+                rgba(255, 183, 77, 0.8) 100%
+            )
+        `;
+    } else {
+        body.style.background = `
+            radial-gradient(
+                circle at 50% 50%, 
+                rgba(255, 183, 77, 0.8), 
+                rgba(228, 149, 76, 0.8) 50%, 
+                rgba(100, 50, 50, 0.5) 100%
+            )
+        `;
     }
 
     wrapTextInSpans();
