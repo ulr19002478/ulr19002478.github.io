@@ -16,13 +16,21 @@
     transition: color 0.3s ease;
 }
 
+/* Wrapper for the image to apply scale on hover */
+.dogImgWrapper {
+    display: inline-block; /* Allow for scaling */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image styling */
 img.dogImg {
-    transition: transform 0.3s ease-in-out; /* Ensure smooth transition for scale */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for animation */
     animation: floatImage 2s ease-in-out infinite; /* Keep the float animation */
 }
 
-img.dogImg:hover {
-    transform: scale(1.1); /* Slightly enlarge the image on hover */
+/* Hover effect on the image wrapper (scales the image) */
+.dogImgWrapper:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
 }
 
 /* Floating effect for the image (only vertical movement, no scaling) */
