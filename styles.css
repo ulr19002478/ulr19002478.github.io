@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-/* Main text styling */
+
 .dancing {
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
-    letter-spacing: 2px; /* Adds spacing to give an airy feel */
+    letter-spacing: 2px;
 }
 
-/* Large dancing text with glowing effect */
+
 .dancingBig {
     font-family: 'Dancing Script', cursive;
     padding: 20px;
     font-size: 100px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Simple shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: #fff;
-    letter-spacing: 3px; /* Add spacing to make the text feel less cramped */
-    transition: color 0.3s ease; /* Smooth color transition */
+    letter-spacing: 3px;
+    transition: color 0.3s ease;
 }
 
-/* Image hover effects (scale and glowing box-shadow) */
+
 img.dogImg {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     animation: floatImage 2s ease-in-out infinite;
@@ -26,24 +26,30 @@ img.dogImg {
 
 img.dogImg:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Add a subtle glow effect on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
-/* Floating effect for the image */
 @keyframes floatImage {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-/* Adding some space for aesthetic purposes */
+
 .textOverlap {
     margin: 20px 0;
 }
 
-/* No background animation for a static, solid color background */
 body {
-    background-color: #e4954c; /* Static dog-themed background */
+    background-color: #e4954c;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,24 +60,25 @@ body {
     position: relative;
 }
 
-/* Fade-in animation for the text */
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Mouse trail effect */
 @keyframes trailAnimation {
     0% {
         transform: scale(1);
         opacity: 1;
     }
+
     100% {
         transform: scale(0);
         opacity: 0;
@@ -79,28 +86,5 @@ body {
 }
 
 body {
-    overflow: hidden; /* Prevents the page from scrolling when the mouse trail is active */
-}
-
-/* JavaScript-based mouse trail effect */
-script {
-    position: absolute;
-    pointer-events: none;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-}
-
-/* Glow effect on the mouse trail */
-body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    background-color: #ffcc00;
-    border-radius: 50%;
-    pointer-events: none;
-    animation: trailAnimation 1s forwards;
+    overflow: hidden;
 }
