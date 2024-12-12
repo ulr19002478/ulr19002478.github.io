@@ -33,20 +33,34 @@
 
         img.dogImg {
             transition: transform 0.3s ease-in-out;
+            animation: floatImage 2s ease-in-out infinite;
         }
 
         img.dogImg:hover {
             transform: scale(1.1);
         }
 
-        /* Each letter will have a slight vertical float animation */
+        /* Floating effect for text letters */
         .letter {
             display: inline-block;
             animation: float 1.5s ease-in-out infinite;
             padding: 0 5px;
         }
 
-        /* Keyframe for the floating effect */
+        /* Floating effect for the image */
+        @keyframes floatImage {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Keyframe for the text floating effect */
         @keyframes float {
             0% {
                 transform: translateY(0);
@@ -71,7 +85,7 @@
         const mainText = document.getElementById('main-text');
         const subText = document.getElementById('sub-text');
         const body = document.body;
-        
+
         // Function to animate the text with random delays for each letter
         function animateText() {
             const textElements = document.querySelectorAll('.magical-text span');
@@ -98,12 +112,8 @@
             animateText(); // Apply random animation delay to the letters
         }
 
-        // Call the function to wrap text in spans and animate on page load
-        window.onload = () => {
-            wrapTextInSpans();
-        };
-
-        toggleImg.addEventListener('click', () => {
+        // Function to update the text and image when clicked
+        function updateTextAndImage() {
             if (toggleImg.src.includes('thedog.png')) {
                 toggleImg.src = 'thecat.jpg';
                 toggleImg.alt = 'the cat is awesome!';
@@ -119,7 +129,18 @@
                 body.style.backgroundColor = '#e4954c'; /* Revert background to the dog-themed color */
                 document.title = 'what the dog doin'; /* Revert the title to the dog theme */
             }
-        });
+
+            // Reapply the letter wrapping and animation on text change
+            wrapTextInSpans();
+        }
+
+        // Call the function to wrap text in spans and animate on page load
+        window.onload = () => {
+            wrapTextInSpans();
+        };
+
+        toggleImg.addEventListener('click', updateTextAndImage);
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
