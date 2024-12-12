@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+/* Dancing Script font styling */
 .dancing {
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
@@ -13,4 +14,30 @@
     color: #fff;
 }
 
+/* Body transition effect */
+body {
+    transition: background-color 0.5s ease-in-out;
+}
 
+/* Dog image hover effect */
+img.dogImg {
+    transition: transform 0.3s ease-in-out;
+}
+
+img.dogImg:hover {
+    transform: scale(1.1);
+}
+
+/* Overlap border styling */
+.overlap {
+    /* Add any additional styles for .overlap here */
+}
+
+/* Text overlap styling */
+.textOverlap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
